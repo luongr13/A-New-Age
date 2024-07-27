@@ -130,5 +130,10 @@ a {
   ul {
     display: block;
   }
+}
 
+@media (hover: hover) {
+  button:hover {
+      background-color: blue;
+  }
 }

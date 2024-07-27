@@ -122,18 +122,14 @@ a {
     color: white;
   }
 
-  nav button:hover {
-    color: rgb(227, 150, 62);
-    background: white;
-  }
-
   ul {
     display: block;
   }
 }
 
 @media (hover: hover) {
-  button:hover {
-      background-color: blue;
+  nav button:hover {
+    color: rgb(227, 150, 62);
+    background: white;
   }
 }

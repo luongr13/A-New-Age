@@ -47,93 +47,87 @@ p, h1, h2, h3, h4, h5, h6 {
 
   /* END OF RESET */
 
-body {
-  font-family: 'Arial';
-}
-
-a {
-  text-decoration: none;
-}
-
-header {
-  background: #015289;
-  padding: 1em;
-  color: #fff;
+  body {
+    font-family: "Arial";
+  }
   
   a {
+    text-decoration: none;
+  }
+  
+  header {
+    background: #015289;
+    padding: 1em;
+    color: #fff;
+  }
+  header a {
     color: inherit;
   }
-}
-
-h1 {
-  font-weight: bold;
-  font-size: 1.5em;
-  margin-bottom: 1em;
-}
-
-button {
-  position: absolute;
-  right: 1em;
-  top: 0.8em;
-  padding: 8px;
-  border: 2px solid #fff;
-  border-radius: 5px;
-  font-size: 1em;
-  background: transparent;
-  color: #fff;
-  display: none;
   
-  &:focus,
-  &:hover {
-    background: #fff;
-    color: #000;
-  }
-}
-
-nav {
-  border-top: 1px solid transparentize(#fff, 0.4);
-  padding: 1em 1em 0;
-  
-  li {
+  h1 {
+    font-weight: bold;
+    font-size: 1.5em;
     margin-bottom: 1em;
   }
   
-  a {
-    display: block;
-  }
-}
-
-.js ul {
-  display: none;
-}
-
-.js button {
-  display: block;
-}
-
-ul.is-active {
-  display: block;
-}
-
-@media (min-width: 700px) {
-  .js ul {
-    display: block;
-  }
-  
-  .js button {
-    display: none;
-  }
-  
   button {
+    position: absolute;
+    right: 1em;
+    top: 0.8em;
+    padding: 8px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    font-size: 1em;
+    background: transparent;
+    color: #fff;
     display: none;
+  }
+  button:focus, button:hover {
+    background: #fff;
+    color: #000;
   }
   
   nav {
-    padding-left: 0;
-    
-    li {
+    border-top: 1px solid rgba(255, 255, 255, 0.6);
+    padding: 1em 1em 0;
+  }
+  nav li {
+    margin-bottom: 1em;
+  }
+  nav a {
+    display: block;
+  }
+  
+  .js ul {
+    display: none;
+  }
+  
+  .js button {
+    display: block;
+  }
+  
+  ul.is-active {
+    display: block;
+  }
+  
+  @media (min-width: 700px) {
+    .js ul {
+      display: block;
+    }
+  
+    .js button {
+      display: none;
+    }
+  
+    button {
+      display: none;
+    }
+  
+    nav {
+      padding-left: 0;
+    }
+    nav li {
       display: inline-block;
       margin-right: 1em;
     }
   }
-}

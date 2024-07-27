@@ -56,38 +56,79 @@ header {
   color: white; 
 }
 
-nav {
-  flex: 1;
-  display: flex;
-}
-
 #menu {
-  flex: 1;
-  display: flex;
-  justify-content: space-between;
-
-  padding: 0;
   list-style: none;
-  /* border: solid black 1px; */
+  text-align: center;
+  padding: 0;
 }
 
 a {
   color: white;
   text-decoration: none;
+  list-style: none;
 }
 
-nav a {
-  transform: scale(2, 1);
-}
-
-button {
+.hidden {
   display: none;
 }
 
-.container {
-  display: flex;
-  align-items: center;
-  gap: 2em;
 
-  padding: 0.5em;
+@media (scripting: none) {
+  button {
+    display: none;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+  
+    padding: 0.5em;
+  }
+
+  #menu {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  nav {
+    flex: 1;
+    display: flex;
+  }
+}
+
+@media (scripting: enabled) {
+  .container {
+    padding: 1em 2em;
+    position: relative;
+  }
+
+  #menu li {
+    margin-top: 1em;
+  }
+
+  nav button {
+    position: absolute;
+    top: 1.25em;
+    right: 2em;
+
+    padding: 0.5em 0.75em;
+
+    background: transparent;
+    border: solid white 2px;
+    border-radius: 5px;
+
+    color: white;
+  }
+
+  nav button:hover {
+    color: rgb(227, 150, 62);
+    background: white;
+  }
+
+  ul {
+    display: block;
+  }
+
 }

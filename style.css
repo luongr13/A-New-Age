@@ -53,7 +53,7 @@ body {
 
 a {
   text-decoration: none;
-  color: rgb(81,89,89);
+  color: #515959;
 }
 
 ul {
@@ -64,18 +64,12 @@ ul {
 .nav-left {
   display: flex;
   align-items: center;
-  /* border: solid black 1px; */
 }
 
 .nav-bar {
   padding-top: 1em;
-  border-bottom: solid rgb(81,89,89) 2px;
+  border-bottom: solid #515959 2px;
 }
-/* 
-header {
-  padding: 1em 0;
-  border-bottom: solid rgb(81,89,89) 2px;
-} */
 
 .container {
   margin-left: auto;
@@ -142,7 +136,6 @@ header {
 
   #toggle {
     margin-bottom: 1em;
-    /* border: solid rgb(81,89,89) 2px; */
     border-radius: 5px;
   }
 

@@ -161,15 +161,4 @@ header {
   nav ul li+li {
     margin-top: 1em;
   }
-/* 
-  #menu {
-    background: rgb(81,89,89);
-  } */
-}
-
-@media (hover: hover) {
-  nav button:hover {
-    color: rgb(227, 150, 62);
-    background: white;
-  }
 }

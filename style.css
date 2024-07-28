@@ -68,7 +68,7 @@ ul {
 
 .nav-bar {
   padding-top: 1em;
-  border-bottom: solid #515959 2px;
+  border-bottom: solid white 2px;
 }
 
 .container {
@@ -79,6 +79,35 @@ ul {
 
 .not-active {
   display: none;
+}
+
+.hero {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.20);
+}
+
+.hero-container {
+  margin-left: 1em;
+  margin-top: 1em;
+  color: white;
+  width: 50%;
+  font-size: 2rem;
+  text-shadow: 1px 3px 9px rgba(0, 0, 0, 1);
+}
+
+@media (max-width: 1100px) {
+  .hero-container {
+    font-size: 1rem;
+    width: 90%;
+  }
 }
 
 @media (scripting: none) {
@@ -121,37 +150,73 @@ ul {
 }
 
 @media (scripting: enabled) {
-  .nav-bar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1em;
-
-    text-align: center;
+  @media (max-width: 1050px) {
+    .nav-bar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1em;
+  
+      text-align: center;
+    }
+  
+    nav {
+      width: 100%;
+    }
+  
+    #toggle {
+      margin-bottom: 1em;
+      border-radius: 5px;
+    }
+  
+    .menu-container {
+      padding: 1em;
+      width: 100%;
+      background: #515959 2px;
+      border-radius: 5px 5px 0 0;
+    }
+  
+    .menu-container a {
+      color: white;
+      text-transform: uppercase;
+    }
+  
+    nav ul li+li {
+      margin-top: 1em;
+    }
   }
 
-  nav {
-    width: 100%;
-  }
+  @media (min-width: 1051px) {
+    .nav-bar {
+      display: flex;
+      gap: 2em;
 
-  #toggle {
-    margin-bottom: 1em;
-    border-radius: 5px;
-  }
+      padding-bottom: 1em;
+    }
 
-  .menu-container {
-    padding: 1em;
-    width: 100%;
-    background: #515959 2px;
-    border-radius: 5px 5px 0 0;
-  }
+    nav {
+      flex: 1;
+      display: flex;
+      align-items: flex-end;
+    }
 
-  .menu-container a {
-    color: white;
-    text-transform: uppercase;
-  }
+    .menu-container {
+      display: block;
+      flex: 1;
+    }
 
-  nav ul li+li {
-    margin-top: 1em;
+    #menu {
+      display: flex;
+      justify-content: space-evenly;
+      font-size: 1.25rem;
+    }
+
+    #toggle {
+      display: none;
+    }
+
+    .hero-container {
+      width: 65%;
+    }
   }
 }

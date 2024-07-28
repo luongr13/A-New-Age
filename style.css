@@ -48,83 +48,123 @@ p, h1, h2, h3, h4, h5, h6 {
 /* END OF RESET */
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-header {
-  background: rgb(227, 150, 62);
-  color: white; 
-}
-
-#menu {
-  list-style: none;
-  text-align: center;
-  padding: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 a {
-  color: white;
   text-decoration: none;
-  list-style: none;
+  color: rgb(81,89,89);
 }
 
-.hidden {
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  /* border: solid black 1px; */
+}
+
+.nav-bar {
+  padding-top: 1em;
+  border-bottom: solid rgb(81,89,89) 2px;
+}
+/* 
+header {
+  padding: 1em 0;
+  border-bottom: solid rgb(81,89,89) 2px;
+} */
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: clamp(320px, 65%, 100%);
+}
+
+.not-active {
   display: none;
 }
 
-
 @media (scripting: none) {
-  button {
+  #toggle {
     display: none;
   }
 
-  .container {
+  .nav-bar {
     display: flex;
-    align-items: center;
-    gap: 2em;
-  
-    padding: 0.5em;
-  }
-
-  #menu {
-    flex: 1;
-    display: flex;
+    align-items: flex-end;
     justify-content: space-between;
+    flex-wrap: wrap;
+
+    font-size: 1.5rem;
+    font-weight: 400;
   }
 
-  nav {
-    flex: 1;
+  .nav-bar ul {
     display: flex;
+    gap: 2em;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  @media (max-width: 1380px) {
+    .nav-bar {
+      flex-direction: column;
+      align-items: center;
+      gap: 1em;
+    }
+
+    .nav-bar ul {
+      gap: 1em;
+      flex-wrap: wrap;
+    }
   }
 }
 
 @media (scripting: enabled) {
-  .container {
-    padding: 1em 2em;
-    position: relative;
+  .nav-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+
+    text-align: center;
   }
 
-  #menu li {
+  nav {
+    width: 100%;
+  }
+
+  #toggle {
+    margin-bottom: 1em;
+    /* border: solid rgb(81,89,89) 2px; */
+    border-radius: 5px;
+  }
+
+  .menu-container {
+    padding: 1em;
+    width: 100%;
+    background: #515959 2px;
+    border-radius: 5px;
+  }
+
+  .menu-container a {
+    color: white;
+    text-transform: uppercase;
+  }
+
+  nav ul li+li {
     margin-top: 1em;
   }
-
-  nav button {
-    position: absolute;
-    top: 1.25em;
-    right: 2em;
-
-    padding: 0.5em 0.75em;
-
-    background: transparent;
-    border: solid white 2px;
-    border-radius: 5px;
-
-    color: white;
-  }
-
-  ul {
-    display: block;
-  }
+/* 
+  #menu {
+    background: rgb(81,89,89);
+  } */
 }
 
 @media (hover: hover) {
